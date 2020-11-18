@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+	<title>Manasayy Birthdayy</title>
+	<link rel="stylesheet" href="style.css">	 
+</head>
+ <body onload="resetBtns()">
+	<h2>Happy Birthday Mansayyy!</h2>
+	<p>We decided to give you a very "Mansayy-type" gift.</p>
+	<p>Hope you like it <3</p>
+
+	<img class="photo" id="photo1" src="photo1.jpeg" width="30%">
+	<img class="photo" id="photo2" src="photo2.jpeg" width="30%">
+	<img class="photo" id="photo3" src="photo3.jpeg" width="30%">
+	<img class="photo" id="photo4" src="photo4.jpeg" width="30%">
+	<img class="photo" id="photo5" src="photo5.jpeg" width="30%">
+	<img class="photo" id="photo6" src="photo6.jpeg" width="30%">
+	<img class="photo" id="photo7" src="photo7.jpeg" width="30%">
+	<img class="photo" id="photo8" src="photo8.jpeg" width="30%">
+	<img class="photo" id="photo9" src="photo9.png" width="100%">
+
+
+	<button class="button" id='btn_test0' onclick="resetBtns()">error</button>
+	<button class="button" id='btn_test1' onclick="show(this.id)">1</button>
+	<button class="button" id='btn_test2' onclick="show(this.id)">2</button>
+	<button class="button" id='btn_test3' onclick="show(this.id)">3</button>
+	<button class="button" id='btn_test4' onclick="show(this.id)">4</button>
+	<button class="button" id='btn_test5' onclick="show(this.id)">5</button>
+	<button class="button" id='btn_test6' onclick="show(this.id)">6</button>
+	<button class="button" id='btn_test7' onclick="show(this.id)">7</button>
+	<button class="button" id='btn_test8' onclick="show(this.id)">8</button>
+	<button class="button" id='btn_test9' onclick="show(this.id)">9</button>
+	<button class="button" id='btn_test10' onclick="resetBtns()">error</button>
+	<button class="button" id='btn_test11' onclick="resetBtns()">error</button>
+
+	<h1>We love you!</h1>
+	<script>
+	//sets a random absolute position to a html element; receives the html element
+	function resetBtns(){
+		var x = document.getElementsByClassName("photo");
+	    for (var i = 0; i < x.length; i++) {
+	    	x[i].style.display = 'none';
+	    }
+
+	   var btn_test = document.querySelectorAll(".button");
+	   for (var i = 0; i < btn_test.length; i++) {
+	         btn_test[i].style.position ='absolute';
+	         btn_test[i].style.top = Math.floor(Math.random()*90+5)+'%';
+	         btn_test[i].style.left = Math.floor(Math.random()*90+5)+'%';
+	    }
+	}
+	window.onbeforeunload = function() {
+	    return "Dude, are you sure you want to leave? Think of the kittens!";
+	    }
+	function show(b_id) {
+		var nid = b_id.split(/(\d+)/);
+		p_id = nid[1]
+		console.log(p_id);
+
+		var new_p = "photo"+[p_id];
+		console.log(new_p);
+
+		document.getElementById(new_p).style.display = "block";	
+	}
+	</script>
+
+</body>
+</html>
+
+
