@@ -3,7 +3,7 @@ body {
 }
 .button {
   background-color: inherit;
-  border: black;
+  border: 1px solid black;
   color: inherit;
   padding: 15px 32px;
   text-align: center;
@@ -11,11 +11,10 @@ body {
   display: inline-block;
   margin: 4px 2px;
   cursor: pointer;
-  border-radius: 0px;
+  border-radius: 50%;
 }
 .button:active {
 	border: none;
-	border-radius: 0px;
 	outline: none;
 }
 button:focus {
