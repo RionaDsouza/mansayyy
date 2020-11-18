@@ -51,12 +51,14 @@
 	         btn_test[i].style.position ='absolute';
 	         btn_test[i].style.top = Math.floor(Math.random()*90+5)+'%';
 	         btn_test[i].style.left = Math.floor(Math.random()*90+5)+'%';
+	         btn_test[i].style.display = "block";
 	    }
 	}
 	window.onbeforeunload = function() {
 	    return "Dude, are you sure you want to leave? Think of the kittens!";
 	    }
 	function show(b_id) {
+		document.getElementById(b_id).style.display = "none";
 		var nid = b_id.split(/(\d+)/);
 		p_id = nid[1]
 		console.log(p_id);
