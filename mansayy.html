@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
  <head>
-	<title>Manasayy Birthdayy</title>
+	<title>It's your Birthday!</title>
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">	 
@@ -40,6 +40,7 @@
 	<h1>We love you!</h1>
 	<script>
 	//sets a random absolute position to a html element; receives the html element
+	var count = 0;
 	function resetBtns(){
 		var x = document.getElementsByClassName("photo");
 	    for (var i = 0; i < x.length; i++) {
@@ -67,7 +68,15 @@
 		console.log(new_p);
 
 		document.getElementById(new_p).style.display = "block";	
+		count++;
+		if (count == 10) {
+			var x = document.getElementsByClassName("button");
+			for (var i = 0; i < x.length; i++) {
+	    	x[i].style.display = 'none';
+	    }
+		}
 	}
+
 	</script>
 
 </body>
