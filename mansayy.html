@@ -42,7 +42,7 @@
 	//sets a random absolute position to a html element; receives the html element
 	
 	function resetBtns(){
-		var count = 0;
+		count = 0;
 		var x = document.getElementsByClassName("photo");
 	    for (var i = 0; i < x.length; i++) {
 	    	x[i].style.display = 'none';
@@ -70,6 +70,7 @@
 
 		document.getElementById(new_p).style.display = "block";	
 		count++;
+		console.log(count);
 		if (count == 10) {
 			var x = document.getElementsByClassName("button");
 			for (var i = 0; i < x.length; i++) {
